@@ -21,7 +21,7 @@ inside your html and Python working as you expected.
 ### The _\<python>_ tag
 
 The \<python> tag is meant to be a block of Python code. Where you can access 
-global variables, make declarations and make imports.
+global variables, make declarations and imports.
 ```html
 <ul>
     <python>
