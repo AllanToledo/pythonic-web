@@ -1,0 +1,27 @@
+<python>
+class item:
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return f"<li>{self.value}</li>"
+
+</python>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+</head>
+<body>
+    <h1>Hello World from Pythonic Web!</h1>
+    <p>The most gorgeous way to create a server-rendered web application!</p>
+    <ul>
+        <python>
+            for i in range(10):
+                write(item(i))
+        </python>
+    </ul>
+</body>
+</html>
