@@ -21,7 +21,8 @@ class RenderErrorFilter(Filter):
         except HttpException as e:
             response.setStatus(e.getStatus())
             page_path = self.pages.get(e.getStatus())
-            if not page_path is None:
+            if page_path is not None:
                 response.setBody(__render__(page_path, None))
+                response.setHeader("content-type", f"text/html; charset=utf-8")
             else:
                 response.setBody("Error")

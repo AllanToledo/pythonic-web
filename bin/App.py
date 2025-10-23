@@ -44,7 +44,9 @@ class WebPythonHandler(BaseHTTPRequestHandler):
                     app_filter.doFilter(request, response, filter_chain)
                 except StopIteration:
                     response.setBody(__render__(request.getPath(), env))
-                    response.setHeader("content-type", "text/html; charset=utf-8")
+                    extension = request.getPath().split('.')[-1]
+                    extension = "html" if extension == "wpy" else extension
+                    response.setHeader("content-type", f"text/{extension}; charset=utf-8")
 
             filter_chain(env.get("REQUEST"), env.get("RESPONSE"))
             App.clearSession()
@@ -144,7 +146,7 @@ class App:
             httpd.server_close()
 
     @staticmethod
-    def setRootFolderPath(path):
+    def setRootFolderPath(path: str):
         App.FOLDER_ROOT = path
 
     @staticmethod
