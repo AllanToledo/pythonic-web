@@ -1,7 +1,7 @@
 # Pythonic Web!
 Pythonic Web is a concept of a server-rendered, pure Python web server.
 
-The idea of creating a web server in Python, that is server-rendered came
+The idea of creating a web server in Python that is server-rendered came
 from a frustration with PHP. I really don't like that syntax.
 
 Python is a lovely language, and I want to create websites using it. 
